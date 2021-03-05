@@ -1,0 +1,17 @@
+.contentHome {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+} 
+
+.contentNew {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.TitleHome{
+  border-bottom: 1px solid #2F80ED;
+  width: 200px;
+  margin-left: 30px;
+}
+

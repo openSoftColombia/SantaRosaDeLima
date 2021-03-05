@@ -1,0 +1,20 @@
+.imgNews{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px ;
+}
+
+.contentNews {
+  display: flex;
+  align-items: center;
+}
+
+.pageNews{
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.plrNews{
+  margin: 0 10px;
+}

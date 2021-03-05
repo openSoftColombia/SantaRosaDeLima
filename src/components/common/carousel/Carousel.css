@@ -1,0 +1,41 @@
+.image{
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+}
+
+.content{
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0em 0em;
+  margin-top: 1em;
+}
+
+.title{
+  max-width: 70%;
+}
+
+.description{
+  max-width: 50%;
+}
+
+/* Estilos de ReactBosstrap */
+.carousel-control-prev, .carousel-control-next {
+  width: 12%;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 7.25rem;
+  left: 9%;
+  /* padding-top: 3.25rem; */
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: left;
+}
+
+.active::after {
+  left: 0px;
+}
