@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import LogoColegioImg from './../../../assets/img/LogoColegio.svg';
 import { NavLink } from 'react-router-dom';
 
 import './HeaderLayout.css';
@@ -9,7 +10,7 @@ const HeaderLayout = () => (
     <div className="container cont">
 
       <div>
-        <img src={'https://w7.pngwing.com/pngs/602/372/png-transparent-cambridge-international-school-cambridge-colegio-cambridge-logo-middle-school-school.png'} className="img scale-up-tl" />
+        <img src={LogoColegioImg} className="img scale-up-tl" />
       </div>
 
       <div className="div" style={{ marginLeft: 'auto' }}>
@@ -22,14 +23,15 @@ const HeaderLayout = () => (
 
           <li><a className="borderLeftRight subMenua">Nosotros</a>
             <ul className="subMenu slide-fwd-bottom">
-              <li><NavLink exact to="/" activeClassName="activeNav"><a className="fw-3 borderFade">Mision</a></NavLink></li>
-              <li><NavLink exact to="/" activeClassName="activeNav"><a className="fw-3 borderFade">Vision</a></NavLink></li>
+              <li><NavLink exact to="/AboutUs/Mission" activeClassName="activeNav"><a className="fw-3 borderFade">Mision</a></NavLink></li>
+              <li><NavLink exact to="/AboutUs/Vision" activeClassName="activeNav"><a className="fw-3 borderFade">Vision</a></NavLink></li>
               <li><NavLink exact to="/" activeClassName="activeNav"><a className="fw-3 borderFade">Principios</a></NavLink></li>
             </ul>
           </li>
 
           <li><NavLink exact to="/AboutUs" activeClassName="activeNav"><a className="borderLeftRight" >Noticias</a></NavLink></li>
           <li><NavLink exact to="/hi" activeClassName="activeNav"><a className="borderLeftRight" >Comunicaciones</a></NavLink></li>
+          <li><NavLink exact to="/Gallery" activeClassName="activeNav"><a className="borderLeftRight" >Galeria</a></NavLink></li>
           <li><NavLink exact to="/hi" activeClassName="activeNav"><a className="borderLeftRight" >Bienestar Estudiantil</a></NavLink></li>
           <li><NavLink exact to="/hi" activeClassName="activeNav"><a className="borderLeftRight" >Contactanos</a></NavLink></li>
         </ul>

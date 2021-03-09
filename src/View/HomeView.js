@@ -3,6 +3,7 @@ import ButtonComponet from '../components/common/button/ButtonComponent';
 import CardComponent from '../components/common/card/CardComponent';
 import CarouselComponent from '../components/common/carousel/CarouselComponet';
 import NewComponent from '../components/common/containerNews/New/NewComponent';
+import SliderComponent from '../components/common/slider/SliderComponent'
 import './Homeview.css'
 
 import image from './../assets/img/image2.svg'
@@ -58,22 +59,66 @@ const HomeView = (props) => {
     rightColor: ''
   }]
 
+  const slider = [{
+    img: 'https://images.pexels.com/photos/2567958/pexels-photo-2567958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/2576787/pexels-photo-2576787.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/5994354/pexels-photo-5994354.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/6948641/pexels-photo-6948641.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/6141276/pexels-photo-6141276.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/2567958/pexels-photo-2567958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/5766435/pexels-photo-5766435.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/709854/pexels-photo-709854.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/1790393/pexels-photo-1790393.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }, {
+    img: 'https://images.pexels.com/photos/4328755/pexels-photo-4328755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    title: 'PreEscolar',
+    description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  }]
+
   return (
     <React.Fragment>
-      <div className="container contentHome">
+      <div className="contentCarouselHome">
+        <CarouselComponent key={img.id} props={img} />
+      </div>
+      <div className="contentHome">
         <div className="row">
           {
             button.map((state, index) => {
               return (
-                <div className="col mb-2 ml-2 mr-2 mt-4" key={index}>
-                  <ButtonComponet {...state} />
+                <div className="col-md mt-4" key={index}>
+                  <ButtonComponet key={index} {...state} />
                 </div>
               )
             })
           }
         </div>
       </div>
-      <CarouselComponent key={img.id} props={img} />
       <div className="container mt-4 contentNew">
         <div className="row">
           <div className="col-xl-6">
@@ -82,11 +127,15 @@ const HomeView = (props) => {
           </div>
           <div className="col-xl-6">
             <h1 className="fw-3 TitleHome mb-4">Info</h1>
-            {card.map((card) => {
-              return <CardComponent {...card} />
+            {card.map((card, index) => {
+              return <CardComponent key={index} {...card} />
             })}
           </div>
         </div>
+      </div>
+      <div className="container contenSliderHome">
+        <h1 className="fw-3 TitleHome mb-4">Galeria</h1>
+        <SliderComponent props={slider} />
       </div>
     </React.Fragment>
   )

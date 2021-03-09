@@ -1,5 +1,6 @@
 import React from 'react'
 import CarouselComponent from '../../carousel/CarouselComponet'
+import LogoImg from './../../../../assets/img/logo.jpg';
 import './News.css'
 
 const NewsComponent = ({ description, publications, img }) => {
@@ -15,7 +16,7 @@ const NewsComponent = ({ description, publications, img }) => {
   return (
     <div className="pageNews pb-2">
       <div className="contentNews">
-        <img src="https://wipy.tv/wp-content/uploads/2019/10/Nueva-imagen-de-Avatar-2.jpg" className="imgNews" />
+        <img src={LogoImg} className="imgNews" />
         <h6 className="fw-5 ml-5">Santa Rosa De Lima</h6>
       </div>
       <div className="plrNews">

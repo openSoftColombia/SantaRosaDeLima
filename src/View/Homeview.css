@@ -4,6 +4,11 @@
   text-align: center;
 } 
 
+.contentCarouselHome {
+  position: relative;
+  z-index: 1;
+}
+
 .contentNew {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
@@ -15,3 +20,9 @@
   margin-left: 30px;
 }
 
+.contenSliderHome{
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
