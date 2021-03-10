@@ -5,6 +5,7 @@ import AboutUsView from '../View/AboutUsView';
 import PublicRoute from './HelperRoutes';
 import Acceessibility from '../View/AccesibilityView';
 import GalleryView from '../View/GalleryView';
+import CircularView from './../View/CircularView'
 
 const PublicRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const PublicRoutes = () => {
       <PublicRoute exact path="/AboutUs/Mission" component={Acceessibility} />
       <PublicRoute exact path="/AboutUs/Vision" component={Acceessibility} />
       <PublicRoute exact path="/Gallery" component={GalleryView} />
+      <PublicRoute exact path="/Comunicaciones" component={CircularView} />
       <Redirect path="/" to="/Home" />
     </Switch>
   )

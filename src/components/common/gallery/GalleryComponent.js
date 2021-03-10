@@ -17,13 +17,13 @@ const styles = {
     backgroundColor: '#7CD1B5'
   },
   small: {
-    gridRowEnd: 'span 26'
+    gridRowEnd: 'span 30'
   },
   medium: {
-    gridRowEnd: 'span 33'
+    gridRowEnd: 'span 37'
   },
   large: {
-    gridRowEnd: 'span 45'
+    gridRowEnd: 'span 49'
   }
 }
 

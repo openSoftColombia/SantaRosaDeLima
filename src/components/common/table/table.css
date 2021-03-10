@@ -1,0 +1,24 @@
+.paginationTable {
+  flex-shrink: 0;
+}
+
+.tableTable {
+  min-width: 500px;
+}
+
+.MuiTableCell-stickyHeader {
+  background-color: transparent !important;
+}
+
+.MuiInput-underline:before {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+
+.MuiInput-underline:after {
+  border-bottom: 1px solid #3f51b5;
+}
+
+.paginationTableTable {
+  display: flex;
+  justify-content: space-between;
+}
