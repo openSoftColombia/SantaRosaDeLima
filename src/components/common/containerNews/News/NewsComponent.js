@@ -16,7 +16,7 @@ const NewsComponent = ({ description, publications, img }) => {
   return (
     <div className="pageNews pb-2">
       <div className="contentNews">
-        <img src={LogoImg} className="imgNews" />
+        <img src={LogoImg} alt='Logo' className="imgNews" />
         <h6 className="fw-5 ml-5">Santa Rosa De Lima</h6>
       </div>
       <div className="plrNews">

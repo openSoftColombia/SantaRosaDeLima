@@ -27,16 +27,16 @@ const HomeView = (props) => {
 
   const button = [{
     name: 'Aula virtual',
-    icon: 'fas fa-atlas fz-2'
+    icon: 'fas fa-atlas fa-sm'
   }, {
     name: 'Admisiones',
-    icon: 'fas fa-users-cog fz-2'
+    icon: 'fas fa-users-cog fa-sm'
   }, {
     name: 'Comentarios',
-    icon: 'fas fa-comments fz-2'
+    icon: 'fas fa-comments fa-sm'
   }, {
     name: 'Porque si',
-    icon: 'fas fa-comments fz-2'
+    icon: 'fas fa-comments fa-sm'
   }]
 
   const card = [{
@@ -111,7 +111,7 @@ const HomeView = (props) => {
           {
             button.map((state, index) => {
               return (
-                <div className="col-md mt-4" key={index}>
+                <div className="col-md mt-5 mb-4" key={index}>
                   <ButtonComponet key={index} {...state} />
                 </div>
               )
@@ -119,14 +119,17 @@ const HomeView = (props) => {
           }
         </div>
       </div>
-      <div className="container mt-4 contentNew">
+
+      <div id="Notices" className="container mt-2 contentNew">
         <div className="row">
           <div className="col-xl-6">
             <h1 className="fw-3 TitleHome mb-4">Anuncios</h1>
+            <hr className="lineHome" />
             <NewComponent />
           </div>
           <div className="col-xl-6">
-            <h1 className="fw-3 TitleHome mb-4">Info</h1>
+            <h1 className="fw-3 TitleHome mb-4">Nivel academico</h1>
+            <hr className="lineHome" />
             {card.map((card, index) => {
               return <CardComponent key={index} {...card} />
             })}
