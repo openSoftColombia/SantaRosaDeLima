@@ -50,6 +50,7 @@
   color: rgb(0, 0, 0);
   text-decoration: none;
   padding: 0.5rem 1rem;
+  font-size: 1vw;
 }
 
 .nav-links:hover {
@@ -110,7 +111,7 @@
   .navbar-logo {
     position: absolute;
     top: -25px;
-    left: 0;
+    left: -54px;
     transform: translate(25%, 50%);
   }
 

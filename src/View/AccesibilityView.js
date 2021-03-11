@@ -4,7 +4,7 @@ import './AccessibilityView.css'
 const AcceessibilityView = ({ title, imgTitle, description, imgDescription }) => {
   return (
     <React.Fragment>
-      <div className="pt-4 container ContentTitleAccessibility">
+      <div className="container ContentTitleAccessibility">
         <span className="SpanAccessibility"><i class="fab fa-hornbill fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">Mision</h1>
       </div>
       <div className="container pt-4">

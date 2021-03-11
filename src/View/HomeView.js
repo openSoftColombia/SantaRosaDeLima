@@ -123,12 +123,12 @@ const HomeView = (props) => {
       <div id="Notices" className="container mt-2 contentNew">
         <div className="row">
           <div className="col-xl-6">
-            <h1 className="fw-3 TitleHome mb-4">Anuncios</h1>
+            <h1 className="fw-3 TitleHome mb-4 mt-3">Anuncios</h1>
             <hr className="lineHome" />
             <NewComponent />
           </div>
           <div className="col-xl-6">
-            <h1 className="fw-3 TitleHome mb-4">Nivel academico</h1>
+            <h1 className="fw-3 TitleHome mb-4 mt-3">Nivel academico</h1>
             <hr className="lineHome" />
             {card.map((card, index) => {
               return <CardComponent key={index} {...card} />

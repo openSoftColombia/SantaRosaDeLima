@@ -96,7 +96,7 @@ const GalleryLayout = () => {
     },
   ]
   return (
-    <div style={styles.pin_container} className="container">
+    <div style={styles.pin_container}>
       {
         props.map(({ img, size, index }) => {
           return <GalleryComponent key={index} img={img} size={size} />
@@ -108,17 +108,16 @@ const GalleryLayout = () => {
 
 const styles = {
   pin_container: {
-    margin: 0,
+    margin: '0 auto',
     padding: 0,
     width: '80vw',
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, 320px)',
+    gridTemplateColumns: 'repeat(auto-fill, 280px)',
     gridAutoRows: '10px',
     position: 'realtive',
-    left: '50%',
-    transform: 'translateX(16%)',
+    left: '0%',
     justifyContent: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'trasparent'
   }
 }
 
