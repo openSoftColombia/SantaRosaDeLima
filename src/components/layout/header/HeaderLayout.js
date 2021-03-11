@@ -1,43 +1,91 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
 import LogoColegioImg from './../../../assets/img/LogoColegio.svg';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import './HeaderLayout.css';
+import Dropdown from './Dropdown';
 
-const HeaderLayout = () => (
-  <header className="header">
-    <div className="container cont">
+const HeaderLayout = () => {
+  const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(true);
 
-      <div>
-        <img src={LogoColegioImg} className="img scale-up-tl" />
+  const handleClick = () => setClick(!click);
+
+  const closeMobileMenu = () => setClick(false);
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(true);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  return (
+    <nav className="navbar">
+      <Link to='./Home' className="navbar-logo">
+        <img src={LogoColegioImg} alt="LOGO" className="img" />
+      </Link>
+
+      <div className="menu-icon" onClick={handleClick}>
+        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
 
-      <div className="div" style={{ marginLeft: 'auto' }}>
-        <Button variant="light" className="buttonHeader scale-up-tr">
-          <i class="fas fa-bars fa-lg" ></i>
-        </Button>
+      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <li className='nav-item'>
+          <NavLink exact to="/Home" className='nav-links' activeClassName="activeNav" onClick={closeMobileMenu}>
+            Inicio
+          </NavLink>
+        </li>
 
-        <ul className="ul scale-up-tr" id="menu">
-          <li><NavLink exact to="/Home" activeClassName="activeNav"><a className="borderLeftRight">Inicio</a></NavLink></li>
+        <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+          <NavLink exact to="/AboutUs" className='nav-links' activeClassName="activeNav" onClick={closeMobileMenu}>
+            Nosotros
+          </NavLink>
+          {dropdown && <Dropdown />}
+        </li>
 
-          <li><a className="borderLeftRight subMenua">Nosotros</a>
-            <ul className="subMenu slide-fwd-bottom">
-              <li><NavLink exact to="/AboutUs/Mission" activeClassName="activeNav"><a className="fw-3 borderFade">Mision</a></NavLink></li>
-              <li><NavLink exact to="/AboutUs/Vision" activeClassName="activeNav"><a className="fw-3 borderFade">Vision</a></NavLink></li>
-              <li><NavLink exact to="/" activeClassName="activeNav"><a className="fw-3 borderFade">Principios</a></NavLink></li>
-            </ul>
-          </li>
+        <li className='nav-item'>
+          <NavLink exact to="/H1" className='nav-links' activeClassName="activeNav" onClick={closeMobileMenu}>
+            Noticias
+          </NavLink>
+        </li>
 
-          <li><NavLink exact to="/AboutUs" activeClassName="activeNav"><a className="borderLeftRight" >Noticias</a></NavLink></li>
-          <li><NavLink exact to="/hi" activeClassName="activeNav"><a className="borderLeftRight" >Comunicaciones</a></NavLink></li>
-          <li><NavLink exact to="/Gallery" activeClassName="activeNav"><a className="borderLeftRight" >Galeria</a></NavLink></li>
-          <li><NavLink exact to="/hi" activeClassName="activeNav"><a className="borderLeftRight" >Bienestar Estudiantil</a></NavLink></li>
-          <li><NavLink exact to="/hi" activeClassName="activeNav"><a className="borderLeftRight" >Contactanos</a></NavLink></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-);
+        <li className='nav-item'>
+          <NavLink exact to="/Comunicaciones" className='nav-links' activeClassName="activeNav" onClick={closeMobileMenu}>
+            Comunicaciones
+          </NavLink>
+        </li>
+
+        <li className='nav-item'>
+          <NavLink exact to="/Gallery" className='nav-links' activeClassName="activeNav" onClick={closeMobileMenu}>
+            Galeria
+          </NavLink>
+        </li>
+
+        <li className='nav-item'>
+          <NavLink exact to="/hi" className='nav-links' activeClassName="activeNav" onClick={closeMobileMenu}>
+            Bienestar Estudiantil
+          </NavLink>
+        </li>
+
+        <li className='nav-item'>
+          <NavLink exact to="/hi" className='nav-links' activeClassName="activeNav" onClick={closeMobileMenu}>
+            Contactanos
+          </NavLink>
+        </li>
+
+      </ul>
+    </nav>
+  )
+}
 
 export default HeaderLayout;
