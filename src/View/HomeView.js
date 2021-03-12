@@ -3,11 +3,11 @@ import ButtonComponet from '../components/common/button/ButtonComponent';
 import CardComponent from '../components/common/card/CardComponent';
 import CarouselComponent from '../components/common/carousel/CarouselComponet';
 import NewComponent from '../components/common/containerNews/New/NewComponent';
-import SliderComponent from '../components/common/slider/SliderComponent'
-import './Homeview.css'
+import SliderComponent from '../components/common/slider/SliderComponent';
+import './Homeview.css';
 
-import image from './../assets/img/image2.svg'
-import image2 from './../assets/img/image3.svg'
+import image from './../assets/img/image2.svg';
+import image2 from './../assets/img/image3.svg';
 
 const HomeView = (props) => {
 
@@ -23,7 +23,7 @@ const HomeView = (props) => {
     src: 'https://images.pexels.com/photos/5088180/pexels-photo-5088180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     title: '',
     description: ''
-  }]
+  }];
 
   const button = [{
     name: 'Aula virtual',
@@ -34,7 +34,7 @@ const HomeView = (props) => {
   }, {
     name: 'Egresado Rosista',
     icon: 'fas fa-comments fa-sm'
-  }]
+  }];
 
   const card = [{
     title: 'PreEscolar',
@@ -54,7 +54,7 @@ const HomeView = (props) => {
     img: image,
     leftColor: '',
     rightColor: ''
-  }]
+  }];
 
   const slider = [{
     img: 'https://images.pexels.com/photos/2567958/pexels-photo-2567958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -96,7 +96,7 @@ const HomeView = (props) => {
     img: 'https://images.pexels.com/photos/4328755/pexels-photo-4328755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     title: 'PreEscolar',
     description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-  }]
+  }];
 
   return (
     <React.Fragment>
@@ -111,7 +111,7 @@ const HomeView = (props) => {
                 <div className="col-md mt-5 mb-4" key={index}>
                   <ButtonComponet key={index} {...state} />
                 </div>
-              )
+              );
             })
           }
         </div>
@@ -131,7 +131,7 @@ const HomeView = (props) => {
             <h1 className="fw-3 TitleHome mb-4 mt-3">Nivel academico</h1>
             <hr className="lineHome" />
             {card.map((card, index) => {
-              return <CardComponent key={index} {...card} />
+              return <CardComponent key={index} {...card} />;
             })}
           </div>
         </div>
@@ -141,7 +141,7 @@ const HomeView = (props) => {
         <SliderComponent props={slider} />
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default HomeView;

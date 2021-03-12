@@ -40,7 +40,7 @@ const SliderComponent = ({ props }) => {
             <Card.Img className="imgSlider" variant="top" src={img} />
             <Card.Body>
               <Card.Title> {title} </Card.Title>
-              <Card.Text> {description} </Card.Text>
+              <Card.Text style={{ maxWidth: '300px', height: '120px' }}> {description} </Card.Text>
             </Card.Body>
           </Card>
         )

@@ -11,31 +11,31 @@ const MenuItems = [
     items: [{
       title: 'Mision',
       path: '/AboutUs/Mission',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Vision',
       path: '/AboutUs/Vision',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Nuestros valores',
       path: '/AboutUs/OurValues',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Filosofia Intitucional',
       path: '/AboutUs/InsPhilosophy',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Axioma y Coloraria',
       path: '/AboutUs/Axioma&Coloraria',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Simbolos',
       path: '/AboutUs/Symbols',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Quienes somos',
       path: '/AboutUs/AboutUs',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }]
   },
   {
@@ -43,19 +43,19 @@ const MenuItems = [
     items: [{
       title: 'Personal Rosista',
       path: '/AboutUs/RosistaStaff',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Promosiones Rosista',
       path: '/AboutUs/RosistaPromotions',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Seleccion de Honor y Merito',
       path: '/AboutUs/Honor&Merit',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Familia Rosista',
       path: '/AboutUs/RosistaFamily',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }],
   },
   {
@@ -63,11 +63,11 @@ const MenuItems = [
     items: [{
       title: 'Santa Rosa de lima',
       path: '/AboutUs/SantaRosaDeLima',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Fiesta de gratitud',
       path: '/AboutUs/GratitudeParty',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }]
   }
 ]
@@ -78,15 +78,15 @@ const MenuItems2 = [
     items: [{
       title: 'Circulares',
       path: '/Communications/Circular',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Cronograma',
       path: '/Communications/Schedule',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }, {
       title: 'Horario de clase',
       path: '/Communications/ClassSchedule',
-      cName: 'dropdown-link fw-4 fz-1'
+      cName: 'dropdown-link fw-4'
     }]
   }
 ]
@@ -102,35 +102,19 @@ const HeaderLayout = () => {
   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
-    if (window.innerWidth < 1380) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
+    setDropdown(true);
   };
 
   const onMouseLeave = () => {
-    if (window.innerWidth < 1380) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
+    setDropdown(false);
   };
 
   const onMouseEnter2 = () => {
-    if (window.innerWidth < 1380) {
-      setDropdown2(false);
-    } else {
-      setDropdown2(true);
-    }
+    setDropdown2(true);
   };
 
   const onMouseLeave2 = () => {
-    if (window.innerWidth < 1380) {
-      setDropdown2(true);
-    } else {
-      setDropdown2(false);
-    }
+    setDropdown2(false);
   };
 
   return (
@@ -140,7 +124,7 @@ const HeaderLayout = () => {
       </Link>
 
       <div className="menu-icon" onClick={handleClick}>
-        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+        <i className={click ? 'fas fa-times fa-times-x' : 'fas fa-bars'} />
       </div>
 
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -150,10 +134,10 @@ const HeaderLayout = () => {
           </NavLink>
         </li>
 
-        <li className='nav-item' onClick={closeMobileMenu} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-          <NavLink to="/AboutUs" className='nav-links fw-4' activeClassName="activeNav" onClick={closeMobileMenu}>
+        <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+          <Link onClick={() => setDropdown(!dropdown)} className='nav-links fw-4'>
             Nosotros <i className={dropdown ? 'fal fa-times fa-xs' : 'fas fa-caret-down fa-xs'} />
-          </NavLink>
+          </Link>
           {dropdown && <Dropdown MenuItems={MenuItems} />}
         </li>
 
@@ -163,10 +147,10 @@ const HeaderLayout = () => {
           </a>
         </li>
 
-        <li className='nav-item' onClick={closeMobileMenu} onMouseEnter={onMouseEnter2} onMouseLeave={onMouseLeave2}>
-          <NavLink exact to="/Comunicaciones" className='nav-links fw-4' activeClassName="activeNav" onClick={closeMobileMenu}>
+        <li className='nav-item' onClick={() => setDropdown2(!dropdown2)} onMouseEnter={onMouseEnter2} onMouseLeave={onMouseLeave2}>
+          <Link className='nav-links fw-4' activeClassName="activeNav" >
             Comunicaciones <i className={dropdown2 ? 'fal fa-times fa-xs' : 'fas fa-caret-down fa-xs'} />
-          </NavLink>
+          </Link>
           {dropdown2 && <Dropdown MenuItems={MenuItems2} />}
         </li>
 
@@ -183,7 +167,7 @@ const HeaderLayout = () => {
         </li>
 
         <li className='nav-item' onClick={closeMobileMenu}>
-          <NavLink exact to="/hi" className='nav-links fw-4' activeClassName="activeNav" onClick={closeMobileMenu}>
+          <NavLink exact to="/" className='nav-links fw-4' activeClassName="activeNav" onClick={closeMobileMenu}>
             Contactanos
           </NavLink>
         </li>
