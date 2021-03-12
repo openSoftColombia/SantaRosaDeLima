@@ -1,10 +1,11 @@
-import Carousel from 'react-bootstrap/Carousel'
-import './Carousel.css'
+import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import './Carousel.css';
 
 
 const CarouselComponent = ({ props, carousel, img }) => {
   return (
-    <div className="">
+    <div>
       <Carousel slide={false}>
         {
           props?.map(({ src, title, description }, index) => {

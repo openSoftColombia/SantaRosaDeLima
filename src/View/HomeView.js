@@ -29,13 +29,10 @@ const HomeView = (props) => {
     name: 'Aula virtual',
     icon: 'fas fa-atlas fa-sm'
   }, {
-    name: 'Admisiones',
+    name: 'Circulares',
     icon: 'fas fa-users-cog fa-sm'
   }, {
-    name: 'Comentarios',
-    icon: 'fas fa-comments fa-sm'
-  }, {
-    name: 'Porque si',
+    name: 'Egresado Rosista',
     icon: 'fas fa-comments fa-sm'
   }]
 
@@ -119,7 +116,10 @@ const HomeView = (props) => {
           }
         </div>
       </div>
-
+      <div className="container contenSliderHome">
+        <h1 className="fw-3 TitleHome mb-4">Bienestar Estudiantil</h1>
+        <SliderComponent props={slider} />
+      </div>
       <div id="Notices" className="container mt-2 contentNew">
         <div className="row">
           <div className="col-xl-6">

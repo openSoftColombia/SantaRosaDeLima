@@ -49,6 +49,10 @@ code {
     monospace;
 }
 
+img {
+  object-fit: cover;
+}
+
 .fw-3 {
   font-weight: 300;
 }
