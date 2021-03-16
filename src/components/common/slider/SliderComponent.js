@@ -1,6 +1,7 @@
 import React from 'react';
 import InfiniteCarousel from 'react-leaf-carousel';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import './Slider.css'
 
 const SliderComponent = ({ props }) => {
@@ -31,16 +32,18 @@ const SliderComponent = ({ props }) => {
       },
     }
   ]
+
   return (
     <InfiniteCarousel breakpoints={breakpoint} showSides={true} sidesOpacity={.5} sideSize={.1} slidesToShow={4}
       scrollOnDevice={true} autoCycle={true} cycleInterval={3500}>
       { props.map(({ img, title, description }) => {
         return (
           <Card style={{ width: '18rem', height: '22rem' }}>
-            <Card.Img className="imgSlider" variant="top" src={img} />
+            <Card.Img className="imgSlider" alt='card' variant="top" src={img} />
             <Card.Body>
               <Card.Title> {title} </Card.Title>
-              <Card.Text style={{ maxWidth: '300px', height: '120px' }}> {description} </Card.Text>
+              <Card.Text style={{ maxWidth: '300px' }}> {description} </Card.Text>
+              <Link to={`/Gallery/${title}`} rel="noopener noreferrer" target="_blank">Ver mas</Link>
             </Card.Body>
           </Card>
         )

@@ -8,32 +8,52 @@ import './Homeview.css';
 
 import image from './../assets/img/image2.svg';
 import image2 from './../assets/img/image3.svg';
+import imge from './../assets/img/Baners.jpg';
+import img2 from './../assets/img/Baners 2.jpg';
+import img3 from './../assets/img/Baners3.jpg';
 
 const HomeView = (props) => {
 
-  const img = [{
-    src: 'https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    title: 'Primera ImagenEste colegio imlemento becas solidarias',
-    description: 'Esta es la primera imagen we'
-  }, {
-    src: 'https://images.pexels.com/photos/4866043/pexels-photo-4866043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    title: 'Segunda Imagen',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut facilisis orci. Etiam ut purus hendrerit, dapibus velit quis, suscipit justo.'
-  }, {
-    src: 'https://images.pexels.com/photos/5088180/pexels-photo-5088180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    title: '',
-    description: ''
-  }];
+  const img = [
+    {
+      src: 'https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Primera ImagenEste colegio imlemento becas solidarias',
+      description: 'Esta es la primera imagen we'
+    }, {
+      src: 'https://images.pexels.com/photos/4866043/pexels-photo-4866043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Segunda Imagen',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut facilisis orci. Etiam ut purus hendrerit, dapibus velit quis, suscipit justo.'
+    }, {
+      src: 'https://images.pexels.com/photos/5088180/pexels-photo-5088180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: '',
+      description: ''
+    }, {
+      src: imge,
+      title: '',
+      description: ''
+    }, {
+      src: img2,
+      title: '',
+      description: ''
+    }, {
+      src: img3,
+      title: '',
+      description: ''
+    }
+  ];
 
   const button = [{
     name: 'Aula virtual',
-    icon: 'fas fa-atlas fa-sm'
+    icon: 'fad fa-video fa-sm',
+    color: '#0f9b0f90'
   }, {
     name: 'Circulares',
-    icon: 'fas fa-users-cog fa-sm'
+    icon: 'fad fa-books-medical fa-sm',
+    color: '#636FA490'
   }, {
     name: 'Egresado Rosista',
-    icon: 'fas fa-comments fa-sm'
+    icon: 'fad fa-user-friends fa-sm',
+    color: '#12c2e990'
   }];
 
   const card = [{
@@ -103,18 +123,17 @@ const HomeView = (props) => {
       <div className="contentCarouselHome">
         <CarouselComponent key={img.id} props={img} />
       </div>
+      <div className="contentButtonHome">
+        {
+          button.map((state, index) => {
+            return (
+              <ButtonComponet key={index} {...state} />
+            );
+          })
+        }
+      </div>
+
       <div className="contentHome">
-        <div className="row">
-          {
-            button.map((state, index) => {
-              return (
-                <div className="col-md mt-5 mb-4" key={index}>
-                  <ButtonComponet key={index} {...state} />
-                </div>
-              );
-            })
-          }
-        </div>
       </div>
       <div className="container contenSliderHome">
         <h1 className="fw-3 TitleHome mb-4">Bienestar Estudiantil</h1>

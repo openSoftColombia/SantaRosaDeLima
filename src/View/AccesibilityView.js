@@ -1,14 +1,14 @@
 import React from 'react';
 import './AccessibilityView.css'
 
-const AcceessibilityView = ({ title, imgTitle, description, imgDescription }) => {
+const AcceessibilityView = () => {
   return (
     <React.Fragment>
       <div className="container ContentTitleAccessibility">
         <span className="SpanAccessibility"><i class="fab fa-hornbill fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">Mision</h1>
       </div>
       <div className="container pt-4">
-        <img src="https://institutolasalle.edu.co/images/2020/BANNER/banner_Mision.png" className="ImgTitleAccessibility" />
+        <img alt="ImgTitle" src="https://institutolasalle.edu.co/images/2020/BANNER/banner_Mision.png" className="ImgTitleAccessibility" alt="AcceessibilityView" />
         <p className="pt-4 fw-3 pz-2 pDescription">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non maximus turpis. Nullam mattis, mi ut aliquet sodales, ante libero suscipit mauris, sed egestas sem erat sit amet turpis. Praesent elementum erat et elit posuere scelerisque. Vivamus a placerat ligula. Praesent aliquet lectus diam, in varius lectus luctus nec. Donec eu elementum ipsum, quis faucibus dolor. Mauris faucibus finibus euismod. Quisque neque lorem, vestibulum euismod tincidunt nec, gravida facilisis lectus. Maecenas vel augue posuere, viverra dui et, dignissim orci. Suspendisse efficitur augue eu massa mollis tincidunt. Sed odio erat, cursus vel lectus eget, pulvinar hendrerit augue. Mauris vehicula condimentum diam, in mattis elit gravida eu. Vivamus commodo tristique mi, ut dapibus nunc imperdiet pharetra.</p>
         <p className="pt-4 fw-3 pz-2 pDescription">
@@ -18,7 +18,7 @@ const AcceessibilityView = ({ title, imgTitle, description, imgDescription }) =>
         <p className="pt-4 fw-3 pz-2 pDescription">
           Nulla eget velit eu quam rutrum efficitur ut a elit. Maecenas eget dolor et lectus vehicula tempus. Quisque dignissim, mi id bibendum consequat, tellus magna commodo risus, id fringilla odio erat ac enim. Suspendisse tempus urna quis euismod volutpat. Vestibulum nec massa ut augue scelerisque pulvinar vel ut urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras a iaculis ex. Integer sodales massa in ornare mattis. Donec vulputate luctus nibh eget venenatis. Etiam id mauris at urna eleifend convallis id ut massa. Duis in libero orci. Fusce elementum ante eget tellus condimentum suscipit. Mauris porta sem augue, ac congue dui iaculis ac.
         </p>
-        <img src="https://images.pexels.com/photos/5088008/pexels-photo-5088008.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="ImgTitleDescription" />
+        <img src="https://images.pexels.com/photos/5088008/pexels-photo-5088008.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="ImgDescription" className="ImgTitleDescription" />
       </div>
     </React.Fragment>
   );

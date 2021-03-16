@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { useParams } from 'react-router-dom';
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import './Gallery.css'
@@ -129,7 +130,8 @@ const ReactPhotoGallery = () => {
       height: 4
     },
   ]
-
+  const { title } = useParams();
+  console.log(title);
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 

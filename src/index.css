@@ -5,7 +5,7 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://institutolasalle.edu.co/images/2020/WEB/instituto-lasalle-barranquilla.jpg');
+  background-image: url('./assets/img/portada.jpg');
   background-size: cover !important;
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;

@@ -19,5 +19,3 @@ export const PublicRoute = ({ component, ...options }) => {
   if (!isAuth) return <Route {...options} component={component} />
   return <Redirect to="/" />
 }
-
-export default PublicRoute;

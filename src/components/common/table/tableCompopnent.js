@@ -15,9 +15,9 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import './table.css';
 
 const columns = [
-  { id: "Title", label: "Titulo", minWidth: 200 },
-  { id: "Date", label: "Fecha de publicacion", minWidth: 300 },
-  { id: "Action", label: "Acctiones", minWidth: 140 }
+  { id: "Title", label: "Titulo", minWidth: 150 },
+  { id: "Date", label: "Fecha de publicacion", minWidth: 90 },
+  { id: "Action", label: "Acctiones", minWidth: 70 }
 ];
 
 const rows = [
@@ -111,7 +111,6 @@ const TableComponent = () => {
   const onChangeSearch = async (e) => {
     e.persist();
     setSearch(e.target.value);
-    console.log(search);
     filterElement();
   }
 
@@ -121,7 +120,6 @@ const TableComponent = () => {
         return item;
       }
     })
-    console.log(filter);
     setTitle(filter);
   }
 

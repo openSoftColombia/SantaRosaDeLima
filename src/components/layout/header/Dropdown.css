@@ -23,7 +23,7 @@
 
 .dropdown-menu-header li:hover {
   border-bottom: 1px solid #1888ff;
-  transition: all 0.2s ease-out;
+  transition: all 0.5s ease-out;
 }
 .active {
   border-bottom: 1px solid #1888ff;

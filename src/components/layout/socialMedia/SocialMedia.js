@@ -1,13 +1,32 @@
 import React from 'react';
 import './social.css'
 
+let link = [
+  {
+    href: 'https://www.instagram.com/opensoftcolombia/',
+    icon: 'icon fab fa-facebook-f'
+  }, {
+    href: 'https://www.instagram.com/opensoftcolombia/',
+    icon: 'icon fab fa-twitter'
+  }, {
+    href: 'https://www.instagram.com/opensoftcolombia/',
+    icon: 'icon fab fa-youtube'
+  }, {
+    href: 'https://www.instagram.com/opensoftcolombia/',
+    icon: 'icon fab fa-instagram'
+  },
+]
+
 const SocialMedia = () => {
   return (
     <div className="social-bar">
-      <a href="https://www.facebook.com/DevCode.la" className="icon fab fa-facebook-f" target="_blank"></a>
-      <a href="https://twitter.com/DevCodela" className="icon fab fa-twitter" target="_blank"></a>
-      <a href="https://www.youtube.com/c/devcodela" className="icon fab fa-youtube" target="_blank"></a>
-      <a href="https://www.instagram.com/devcodela/" className="icon fab fa-instagram" target="_blank"></a>
+      {
+        link.map(({ href, icon, index }) => {
+          return (
+            <a key={index} href={href} className={icon} rel="noopener noreferrer" target="_blank"></a>
+          )
+        })
+      }
     </div>
   )
 }

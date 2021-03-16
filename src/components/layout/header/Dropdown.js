@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './Dropdown.css'
 
-const Dropdown = ({ MenuItems }) => {
+const Dropdown = ({ MenuItems, onClick }) => {
   const [click, setClick] = useState(false)
 
   const handleClick = () => setClick(!click)
@@ -22,7 +22,7 @@ const Dropdown = ({ MenuItems }) => {
               {
                 items?.map(({ cName, path, title, index }) => {
                   return (
-                    <li key={index}>
+                    <li key={index} onClick={onClick}>
                       <NavLink exact to={path} className={cName} activeClassName="active" onClick={() => setClick(false)}>
                         {title}
                       </NavLink>

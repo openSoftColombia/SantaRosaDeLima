@@ -10,6 +10,11 @@
   padding-top: 80px;
 }
 
+.contentButtonHome {
+ display: flex;
+ height: 70px;
+}
+
 .contentNew {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
@@ -32,4 +37,11 @@
   border-radius: 20px;
   padding: 20px;
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 720px) {
+  .contentButtonHome {
+    flex-direction: column;
+    height: 160px;
+   }
 }

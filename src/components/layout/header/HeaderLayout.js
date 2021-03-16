@@ -99,7 +99,9 @@ const HeaderLayout = () => {
 
   const handleClick = () => setClick(!click);
 
-  const closeMobileMenu = () => setClick(false);
+  const closeMobileMenu = () => {
+    setClick(false);
+  };
 
   const onMouseEnter = () => {
     setDropdown(true);
@@ -116,6 +118,8 @@ const HeaderLayout = () => {
   const onMouseLeave2 = () => {
     setDropdown2(false);
   };
+
+
 
   return (
     <nav className="navbar">
@@ -135,10 +139,10 @@ const HeaderLayout = () => {
         </li>
 
         <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-          <Link onClick={() => setDropdown(!dropdown)} className='nav-links fw-4'>
+          <NavLink to="/AboutUs" activeClassName="activeNav" onClick={() => setDropdown(!dropdown)} className='nav-links fw-4'>
             Nosotros <i className={dropdown ? 'fal fa-times fa-xs' : 'fas fa-caret-down fa-xs'} />
-          </Link>
-          {dropdown && <Dropdown MenuItems={MenuItems} />}
+          </NavLink>
+          {dropdown && <Dropdown MenuItems={MenuItems} onClick={closeMobileMenu} />}
         </li>
 
         <li className='nav-item' onClick={closeMobileMenu}>
@@ -151,7 +155,7 @@ const HeaderLayout = () => {
           <Link className='nav-links fw-4' activeClassName="activeNav" >
             Comunicaciones <i className={dropdown2 ? 'fal fa-times fa-xs' : 'fas fa-caret-down fa-xs'} />
           </Link>
-          {dropdown2 && <Dropdown MenuItems={MenuItems2} />}
+          {dropdown2 && <Dropdown MenuItems={MenuItems2} onClick={closeMobileMenu} />}
         </li>
 
         <li className='nav-item' onClick={closeMobileMenu}>

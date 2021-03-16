@@ -1,8 +1,6 @@
 .button{
-  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
-  width: 300px;
-  height: 90px;
+  /* background: #297fb957; */
+  height: 100%;
   border: 0;
   border-color: transparent;
-  border-radius: 5px;
 } 
