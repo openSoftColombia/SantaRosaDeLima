@@ -8,25 +8,28 @@ import './Homeview.css';
 
 import image from './../assets/img/image2.svg';
 import image2 from './../assets/img/image3.svg';
+import prueba from './../assets/img/prueba.jpg';
+import prueba2 from './../assets/img/prueba2.jpg';
+import prueba3 from './../assets/img/prueba3.jpg';
 import imge from './../assets/img/Baners.jpg';
 import img2 from './../assets/img/Baners 2.jpg';
 import img3 from './../assets/img/Baners3.jpg';
 
 const HomeView = (props) => {
 
-  const img = [
+  const imgBanner = [
     {
-      src: 'https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      src: prueba,
       title: 'Primera ImagenEste colegio imlemento becas solidarias',
       description: 'Esta es la primera imagen we'
     }, {
-      src: 'https://images.pexels.com/photos/4866043/pexels-photo-4866043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      src: prueba2,
+      title: 'Primera ImagenEste colegio imlemento becas solidarias',
+      description: 'Esta es la primera imagen we'
+    }, {
+      src: prueba3,
       title: 'Segunda Imagen',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut facilisis orci. Etiam ut purus hendrerit, dapibus velit quis, suscipit justo.'
-    }, {
-      src: 'https://images.pexels.com/photos/5088180/pexels-photo-5088180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      title: '',
-      description: ''
     }, {
       src: imge,
       title: '',
@@ -45,15 +48,15 @@ const HomeView = (props) => {
   const button = [{
     name: 'Aula virtual',
     icon: 'fad fa-video fa-sm',
-    color: '#0f9b0f90'
+    color: 'rgba(115, 175, 255, 0.75)'
   }, {
     name: 'Circulares',
     icon: 'fad fa-books-medical fa-sm',
-    color: '#636FA490'
+    color: 'rgba(0, 85, 186, 0.75)'
   }, {
     name: 'Egresado Rosista',
     icon: 'fad fa-user-friends fa-sm',
-    color: '#12c2e990'
+    color: 'rgba(47, 128, 237, 0.75)'
   }];
 
   const card = [{
@@ -121,8 +124,9 @@ const HomeView = (props) => {
   return (
     <React.Fragment>
       <div className="contentCarouselHome">
-        <CarouselComponent key={img.id} props={img} />
+        <CarouselComponent key={imgBanner.id} images={imgBanner} />
       </div>
+
       <div className="contentButtonHome">
         {
           button.map((state, index) => {
@@ -133,8 +137,6 @@ const HomeView = (props) => {
         }
       </div>
 
-      <div className="contentHome">
-      </div>
       <div className="container contenSliderHome">
         <h1 className="fw-3 TitleHome mb-4">Bienestar Estudiantil</h1>
         <SliderComponent props={slider} />
@@ -155,6 +157,7 @@ const HomeView = (props) => {
           </div>
         </div>
       </div>
+
       <div className="container contenSliderHome">
         <h1 className="fw-3 TitleHome mb-4">Galeria</h1>
         <SliderComponent props={slider} />

@@ -3,14 +3,18 @@ import CarouselComponent from '../../carousel/CarouselComponet'
 import LogoImg from './../../../../assets/img/logo.jpg';
 import './News.css'
 
-const NewsComponent = ({ description, publications, img }) => {
+const NewsComponent = ({ description, img }) => {
   const carousel = {
     width: '96%',
-    margin: '0 2%'
+    margin: '0 2%',
+    backgroundColor: 'rgba(140, 139, 139, 0.02)',
+    borderRadius: '5px'
   }
 
   const iamgen = {
-    height: '300px'
+    height: '300px',
+    margin: 'auto',
+    width: 'auto'
   }
 
   return (
@@ -21,11 +25,11 @@ const NewsComponent = ({ description, publications, img }) => {
       </div>
       <div className="plrNews">
         <p className="fw-3">
-          {publications}
+          {description}
         </p>
       </div>
       <div>
-        <CarouselComponent props={img} carousel={carousel} img={iamgen} />
+        <CarouselComponent images={img} carousel={carousel} img={iamgen} />
       </div>
     </div>
   )

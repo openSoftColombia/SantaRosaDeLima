@@ -10,7 +10,7 @@ const CardComponent = ({ title, description, img, leftColor, rightColor }) => (
     <div className="card-body">
       <div className="row center">
         <div className="col-6">
-          <img src={img || fondoImg} className="float-right" alt="exercise" />
+          <img src={img || fondoImg} className="float-right" alt="card" />
         </div>
         <div className="col-6 card-Card-Info">
           <h1 className="fw-7" >{title}</h1>

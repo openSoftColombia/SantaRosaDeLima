@@ -1,11 +1,11 @@
 import React from 'react';
 import { Redirect, Switch } from 'react-router-dom';
-import HomeView from '../View/HomeView';
+import HomeView from '../pages/HomeView';
 import { PublicRoute } from './HelperRoutes';
-import Acceessibility from '../View/AccesibilityView';
-import GalleryView from '../View/GalleryView';
-import CircularView from './../View/CircularView'
-import LogInView from '../View/LogInView';
+import Acceessibility from '../pages/AccesibilityView';
+import GalleryView from '../pages/GalleryView';
+import CircularView from './../pages/CircularView'
+import LogInView from '../pages/LogInView';
 
 const PublicRoutes = () => {
   return (

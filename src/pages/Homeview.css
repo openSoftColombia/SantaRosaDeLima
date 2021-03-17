@@ -1,22 +1,20 @@
-.contentHome {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-} 
-
 .contentCarouselHome {
   position: relative;
   z-index: 1;
-  padding-top: 80px;
+  padding: 90px 0 10px 0;
+  width: 95%;
+  margin: 0 2.5%;
 }
 
 .contentButtonHome {
  display: flex;
  height: 70px;
+ width: 95%;
+ margin: 0 2.5%;
 }
 
 .contentNew {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.644);
   border-radius: 10px;
 }
 
@@ -33,7 +31,7 @@
 }
 
 .contenSliderHome{
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.609);
   border-radius: 20px;
   padding: 20px;
   margin-top: 20px;

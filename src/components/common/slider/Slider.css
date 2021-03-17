@@ -5,5 +5,5 @@
 .imgSlider {
   width: 18em;
   height: 10em;
-  object-fit: cover;
+  border-radius: 3px;
 }

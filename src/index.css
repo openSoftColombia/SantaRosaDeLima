@@ -51,6 +51,7 @@ code {
 
 img {
   object-fit: cover;
+  border-radius: 15px;
 }
 
 .fw-3 {
