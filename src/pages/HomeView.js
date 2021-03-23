@@ -41,7 +41,7 @@ const HomeView = () => {
           <div className="col-xl-6">
             <h1 className="fw-3 TitleHome mb-4 mt-3">Anuncios</h1>
             <hr className="lineHome" />
-            <NewComponent notice={dataNotice} />
+            <NewComponent notice={notic} />
           </div>
           <div className="col-xl-6">
             <h1 className="fw-3 TitleHome mb-4 mt-3">Nivel academico</h1>
@@ -64,6 +64,59 @@ const HomeView = () => {
 };
 
 export default HomeView;
+
+const notic = [
+  {
+    title: "openSoft",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit ut, maecenas consequat augue sem eros placerat id rhoncus risus, montes hendrerit porta molestie aliquam curabitur faucibus. Feugiat primis duis lectus odio euismod sem magna auctor curae purus, ullamcorper aenean sodales nascetur venenatis fermentum taciti phasellus mollis nisl semper, urna dis magnis ornare placerat class mi montes hendrerit.",
+    createdAt: "2021-03-18",
+    resources: [
+      {
+        src: "https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+      {
+        src: "https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+      {
+        src: "https://images.pexels.com/photos/1581012/pexels-photo-1581012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
+    ]
+  }, {
+    title: "",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit ut, maecenas consequat augue sem eros placerat id rhoncus risus, montes hendrerit porta molestie aliquam curabitur faucibus. Feugiat primis duis lectus odio euismod sem magna auctor curae purus,.",
+    createdAt: "2021-03-23",
+    resources: [
+      {
+        src: "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
+      {
+        src: "https://images.pexels.com/photos/1327335/pexels-photo-1327335.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+    ]
+  }, {
+    title: "OPENSOFT COLOMBIA S.A.S",
+    description: "",
+    createdAt: "2021-03-20",
+    resources: [
+      {
+        src: "https://images.pexels.com/photos/1421837/pexels-photo-1421837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+    ]
+  }, {
+    title: "¡IMPORTAN! OPENSOFT COLOMBIA S.A.S ",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit ut, maecenas consequat augue sem eros placerat id rhoncus risus, montes hendrerit porta molestie aliquam curabitur faucibus. Feugiat primis duis lectus odio euismod sem magna auctor curae purus, ullamcorper aenean sodales nascetur venenatis fermentum taciti phasellus mollis nisl semper, urna dis magnis ornare placerat class mi montes hendrerit.",
+    createdAt: "2021-03-22"
+  }, {
+    title: "OPENSOFT COLOMBIA S.A.S",
+    description: "",
+    createdAt: "2021-03-23",
+    resources: [
+      {
+        src: "https://images.pexels.com/photos/1581012/pexels-photo-1581012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
+    ]
+  },
+]
 
 const imgBanner = [
   {

@@ -77,8 +77,7 @@ const TableComponent = ({ rows }) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                     <TableCell>
-                      {row.Title}
-                      <a href={row.src} rel="noopener noreferrer" target="_blank"><i className="fas fa-download" style={{ color: 'Tomato' }}></i></a>
+                      <a href={row.src} rel="noopener noreferrer" target="_blank">{row.Title}</a>
                     </TableCell>
                     <TableCell>
                       {row.Date}

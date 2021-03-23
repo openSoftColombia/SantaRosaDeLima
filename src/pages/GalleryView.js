@@ -136,7 +136,7 @@ const images = [
     width: 4,
     height: 3
   }, {
-    src: 'https://images.pexels.com/photos/6216314/pexels-photo-6216314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    src: 'https://images.pexels.com/photos/1581012/pexels-photo-1581012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     width: 3,
     height: 4
   },
