@@ -21,9 +21,9 @@ const SocialMedia = () => {
   return (
     <div className="social-bar">
       {
-        link.map(({ href, icon, index }) => {
+        link.map(({ href, icon }) => {
           return (
-            <a key={index} href={href} className={icon} rel="noopener noreferrer" target="_blank"></a>
+            <a key={icon} href={href} className={icon} rel="noopener noreferrer" target="_blank"></a>
           )
         })
       }

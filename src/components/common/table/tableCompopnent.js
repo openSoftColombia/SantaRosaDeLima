@@ -14,86 +14,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 
 import './table.css';
 
-const columns = [
-  { id: "Title", label: "Titulo", minWidth: 150 },
-  { id: "Date", label: "Fecha de publicacion", minWidth: 90 },
-  { id: "Action", label: "Acctiones", minWidth: 70 }
-];
-
-const rows = [
-  {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  },
-];
-
-const TableComponent = () => {
+const TableComponent = ({ rows }) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [search, setSearch] = useState('');
@@ -130,7 +51,7 @@ const TableComponent = () => {
           InputProps={{
             endAdornment: (
               <InputAdornment position="start">
-                <i class="fal fa-search"></i>
+                <i className="fal fa-search"></i>
               </InputAdornment>
             )
           }} />
@@ -157,13 +78,10 @@ const TableComponent = () => {
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                     <TableCell>
                       {row.Title}
+                      <a href={row.src} rel="noopener noreferrer" target="_blank"><i className="fas fa-download" style={{ color: 'Tomato' }}></i></a>
                     </TableCell>
                     <TableCell>
                       {row.Date}
-                    </TableCell>
-                    <TableCell>
-                      <i class="fas fa-download" style={{ color: 'Tomato' }}></i>
-                      <i class="far fa-eye" style={{ color: 'dodgerblue', marginLeft: '10px' }}></i>
                     </TableCell>
                   </TableRow>
                 );
@@ -180,3 +98,9 @@ const TableComponent = () => {
 }
 
 export default TableComponent;
+
+const columns = [
+  { id: "Title", label: "Titulo", minWidth: 150 },
+  { id: "Date", label: "Fecha de publicacion", minWidth: 90 }
+];
+

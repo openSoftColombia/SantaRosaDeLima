@@ -2,11 +2,15 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin: 10px ;
+  margin: 10px 10px 10px 15px;
 }
 
 .contentNews {
   display: flex;
+  align-items: center;
+}
+
+.contentNewsUser {
   align-items: center;
 }
 
@@ -16,5 +20,5 @@
 }
 
 .plrNews{
-  margin: 0 10px;
+  margin: 0 20px 10px 20px;
 }

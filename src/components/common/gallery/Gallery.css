@@ -5,3 +5,8 @@
   object-fit: cover;
   cursor: pointer;
 }
+
+.css-1cm5myo {
+  max-height: 697px !important;
+  border-radius: 0;
+}
