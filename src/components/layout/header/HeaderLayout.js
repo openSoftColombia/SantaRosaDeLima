@@ -60,19 +60,7 @@ const HeaderLayout = () => {
         </li>
 
         <li className='nav-item' onClick={closeMobileMenu}>
-          <NavLink exact to="/Gallery" className='nav-links fw-4' activeClassName="activeNav" onClick={closeMobileMenu}>
-            Galeria
-          </NavLink>
-        </li>
-
-        <li className='nav-item' onClick={closeMobileMenu}>
-          <NavLink exact to="/hi" className='nav-links fw-4' activeClassName="activeNav" onClick={closeMobileMenu}>
-            Bienestar Estudiantil
-          </NavLink>
-        </li>
-
-        <li className='nav-item' onClick={closeMobileMenu}>
-          <NavLink exact to="/" className='nav-links fw-4' activeClassName="activeNav" onClick={closeMobileMenu}>
+          <NavLink exact to="/Contact" className='nav-links fw-4' activeClassName="activeNav" onClick={closeMobileMenu}>
             Contactanos
           </NavLink>
         </li>

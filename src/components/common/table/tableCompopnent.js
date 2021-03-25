@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 import Paper from "@material-ui/core/Paper";
 import Table from "@material-ui/core/Table";
@@ -15,6 +16,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import './table.css';
 
 const TableComponent = ({ rows }) => {
+  console.log(rows);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [search, setSearch] = useState('');
@@ -75,12 +77,12 @@ const TableComponent = ({ rows }) => {
             <TableBody>
               {title.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                 return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                  <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
                     <TableCell>
-                      <a href={row.src} rel="noopener noreferrer" target="_blank">{row.Title}</a>
+                      <Link to={`/Communications/document/${row.id}`}>{row.title}</Link>
                     </TableCell>
                     <TableCell>
-                      {row.Date}
+                      {new Date(row.createdAt).toLocaleDateString("en-US")}
                     </TableCell>
                   </TableRow>
                 );

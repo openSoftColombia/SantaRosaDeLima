@@ -1,21 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './AccessibilityView.css'
+import LoadingComponent from './../components/common/loading/LoadingComponent'
+
+import axios from 'axios'
+import url from './../config/config'
 
 const DocumentPage = () => {
+  const [document, setDocument] = useState([])
   const { id } = useParams();
-  console.log(id);
+
+  useEffect(() => {
+    getDocumentId()
+  }, [])
+
+  const getDocumentId = async () => {
+    const { data } = await axios.get(`${url}/document/${id}`)
+    setDocument(data)
+  }
 
   return (
     <React.Fragment>
-      <div className="container ContentTitleAccessibility">
-        <span className="SpanAccessibility"><i className="far fa-edit fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">name Document</h1>
-      </div>
-      <div className="container pt-4">
-        <p className="pt-4 fw-3 pz-2 pDescription">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non maximus turpis. Nullam mattis, mi ut aliquet sodales, ante libero suscipit mauris, sed egestas sem erat sit amet turpis. Praesent elementum erat et elit posuere scelerisque. Vivamus a placerat ligula. Praesent aliquet lectus diam, in varius lectus luctus nec. </p>
-        <a href='hfgdghj' rel="noopener noreferrer" target="_blank">descargar aqui</a>
-      </div>
+      {document ?
+        <React.Fragment>
+          <div className="container ContentTitleAccessibility">
+            <span className="SpanAccessibility"><i className="far fa-edit fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">{document.title}</h1>
+          </div>
+          <div className="container pt-4">
+            <p className="pt-4 fw-3 pz-2 pDescription">{document.description}</p>
+            {document.resources?.map(x => {
+              return (<h6 key={x.id}><a href={x.src} rel="noopener noreferrer" target="_blank">Descargar aqui</a></h6>)
+            })}
+          </div>
+        </React.Fragment>
+        : <LoadingComponent />
+      }
     </React.Fragment>
   );
 }

@@ -6,4 +6,18 @@
   width: 18em;
   height: 10em;
   border-radius: 3px;
+  margin-left: auto;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 18em !important;
+  height: 22em;
+}
+
+.slick-next:before, .slick-prev:before {
+  opacity: 1;
+  color: #000 !important;
 }

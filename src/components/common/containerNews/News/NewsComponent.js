@@ -27,7 +27,6 @@ const NewsComponent = ({ title, description, createdAt, resources }) => {
 
 export default NewsComponent;
 
-
 const prettyDate = (time) => {
   var date = new Date((time || "").replace(/-/g, "/").replace(/[TZ]/g, " ")),
     diff = (((new Date()).getTime() - date.getTime()) / 1000),

@@ -19,7 +19,6 @@ const useFetch = url => {
     }
     fetchResource();
   }, [url])
-
   return { data, loading, error };
 }
 

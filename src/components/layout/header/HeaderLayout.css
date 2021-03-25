@@ -108,14 +108,14 @@
     display: block;
     align-items: center;
     height: fit-content;
-    width: 50%;
+    width: 200px;
   }
 
   .nav-links {
     text-align: left;
     padding: 0.5rem;
     padding-left: 3em;
-    width: 100%;
+    width: 200px;
     display: table;
     font-size: 14.1545px;
   }

@@ -1,23 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import TableComponent from '../components/common/table/tableCompopnent';
+import LoadingComponent from './../components/common/loading/LoadingComponent'
 
-import useFetch from './../hooks/useFetch'
+import axios from 'axios'
 import url from './../config/config'
 
 import './Circular.css'
 
 const CircularView = () => {
 
-  const { data: dataDocument, loading, error } = useFetch(`${url}/notice`);
+  const [document, setDocument] = useState([])
+  const [title, setTitle] = useState('')
+  const { title: namePage } = useParams();
+  console.log(namePage);
+
+  useEffect(() => {
+    getDocumentType()
+  }, [namePage])
+
+  const getDocumentType = async () => {
+    if (namePage == "Circular") {
+      const { data } = await axios.get(`${url}/document/type/C`)
+      setDocument(data)
+      setTitle('Circulares')
+    } else if (namePage == "Schedule") {
+      const { data } = await axios.get(`${url}/document/type/S`)
+      setDocument(data)
+      setTitle('Cronograma')
+    } else {
+      const { data } = await axios.get(`${url}/document/type/H`)
+      setDocument(data)
+      setTitle('Horarios de clase')
+    }
+  }
+
+  console.log(document);
 
   return (
     <React.Fragment>
       <div className="container ContentTitleCircular">
-        <span className="SpanCircular"><i className="fal fa-book-spells fa-2x"></i></span><h1 className="fw-4 TitleCircular">Circulares</h1>
+        <span className="SpanCircular"><i className="fal fa-book-spells fa-2x"></i></span><h1 className="fw-4 TitleCircular">{title}</h1>
       </div>
       <div className="container" style={{ alignItems: 'center', textAlign: 'center' }}>
-        <TableComponent rows={rows} />
+        {document.length > 0 ? <TableComponent rows={document} /> : <LoadingComponent />}
       </div>
     </React.Fragment>
   );
@@ -25,85 +51,3 @@ const CircularView = () => {
 
 export default CircularView;
 
-
-const rows = [
-  {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021',
-    resourses: [
-      {
-        src: 'https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/VSP/circular-externa-005-de-2020.pdf'
-      }, {
-        src: 'https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/VSP/circular-externa-005-de-2020.pdf'
-      }, {
-        src: 'https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/ED/VSP/circular-externa-005-de-2020.pdf'
-      }
-    ]
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'Circular Metodología Entrega Preventivo Primer Periodo 2021',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  }, {
-    Title: 'jose maria',
-    Date: '05 Marzo 2021'
-  },
-];

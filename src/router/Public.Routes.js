@@ -6,7 +6,7 @@ import Acceessibility from '../pages/AccesibilityView';
 import GalleryView from '../pages/GalleryView';
 import CircularView from './../pages/CircularView'
 import DocumentPage from './../pages/DocumentPage'
-import LogInView from '../pages/LogInView';
+import ContactView from './../pages/ContactView'
 
 const PublicRoutes = () => {
   return (
@@ -16,18 +16,13 @@ const PublicRoutes = () => {
 
       <PublicRoute exact path="/AboutUs/:Seccion" component={Acceessibility} />
 
-      <PublicRoute exact path="/Communications/Circular" component={CircularView} />
-      <PublicRoute exact path="/Communications/Schedule" component={CircularView} />
-      <PublicRoute exact path="/Communications/ClassSchedule" component={CircularView} />
+      <PublicRoute exact path="/Communications/:title" component={CircularView} />
 
       <PublicRoute exact path="/Communications/document/:id" component={DocumentPage} />
 
-      <PublicRoute exact path="/Gallery" component={GalleryView} />
-      <PublicRoute exact path="/Gallery/:title" component={GalleryView} />
+      <PublicRoute exact path="/Gallery/:id" component={GalleryView} />
 
-      <PublicRoute exact path="/StudentWelfare/:title" component={GalleryView} />
-
-      <PublicRoute exact path="/LogIn" component={LogInView} />
+      <PublicRoute exact path="/Contact" component={ContactView} />
 
       <Redirect path="/" to="/Home" />
 

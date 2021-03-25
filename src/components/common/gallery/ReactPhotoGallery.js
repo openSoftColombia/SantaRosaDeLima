@@ -21,7 +21,7 @@ const ReactPhotoGallery = ({ images }) => {
 
   return (
     <div>
-      <Gallery photos={images} margin={5, 6} columns={columns} direction="column" onClick={openLightbox} />
+      <Gallery photos={images} margin={5} columns={columns} direction="column" onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>

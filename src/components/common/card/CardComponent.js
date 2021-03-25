@@ -3,7 +3,7 @@ import fondoImg from './../../../assets/img/image.svg'
 import './card.css';
 
 const CardComponent = ({ title, description, img, leftColor, rightColor }) => (
-  <div className="card mx-auto card-Card" style={{
+  <div className="card-Card-Card mx-auto card-Card" style={{
     backgroundImage: `url(),
     linear-gradient(to right, ${leftColor || '#56CCF2'}  , ${rightColor || '#2F80ED'}) `
   }}>
