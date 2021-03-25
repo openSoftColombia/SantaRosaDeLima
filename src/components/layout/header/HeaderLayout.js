@@ -53,7 +53,7 @@ const HeaderLayout = () => {
         </li>
 
         <li className='nav-item' onClick={() => setDropdown2(!dropdown2)} onMouseEnter={onMouseEnter2} onMouseLeave={onMouseLeave2}>
-          <NavLink to="/AboutUs" className='nav-links fw-4' activeClassName="activeNav" >
+          <NavLink to="/Communications" className='nav-links fw-4' activeClassName="activeNav" >
             Comunicaciones <i className={dropdown2 ? 'fal fa-times fa-xs' : 'fas fa-caret-down fa-xs'} />
           </NavLink>
           {dropdown2 && <Dropdown MenuItems={MenuItems2} onClick={closeMobileMenu} />}
