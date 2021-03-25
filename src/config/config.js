@@ -1,3 +1,3 @@
-const url = 'http://localhost:8080/api';
+const url = 'http://apisantarosa.santarosadelimacolegio.edu.co/api';
 
 export default url;
