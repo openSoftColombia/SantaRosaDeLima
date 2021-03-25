@@ -51,5 +51,5 @@ const carousel = {
 const iamgen = {
   height: '300px',
   margin: 'auto',
-  width: 'auto'
+  objectFit: 'contain'
 }

@@ -55,7 +55,7 @@
   border: none !important;
 }
 
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1100px) {
   .dropdown-menu-header {
     padding-left: 40px;
     top: 0;
