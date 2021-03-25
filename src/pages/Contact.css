@@ -6,3 +6,10 @@
     border-radius: 10%;
     color: white;
 }
+
+.TitleContact{
+    border-bottom: 3px solid #2b82f3;
+    width: auto;
+    margin-left: 6px;
+    color: #000000;
+}

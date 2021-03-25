@@ -6,12 +6,11 @@ import NewComponent from '../components/common/containerNews/New/NewComponent';
 import SliderComponent from '../components/common/slider/SliderComponent';
 import './Homeview.css';
 
-import axios from 'axios'
 import useFetch from './../hooks/useFetch'
 import url from './../config/config'
 
 // informacion ficticia para mostrat sin la api
-import { FireButton, FireCard, FireSlider, FireNotice, FireImgBanner } from './../constantFireBase';
+import { FireButton, FireCard } from './../constantFireBase';
 
 const HomeView = () => {
   const { data: dataBanners } = useFetch(`${url}/banner`);
