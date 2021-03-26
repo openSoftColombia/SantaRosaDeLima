@@ -54,7 +54,7 @@ const HeaderLayout = () => {
 
         <li className='nav-item' onClick={() => setDropdown2(!dropdown2)} onMouseEnter={onMouseEnter2} onMouseLeave={onMouseLeave2}>
           <NavLink to="/Communications" className='nav-links fw-4' activeClassName="activeNav" >
-            Comunicaciones <i className={dropdown2 ? 'fal fa-times fa-xs' : 'fas fa-caret-down fa-xs'} />
+            Comunicación <i className={dropdown2 ? 'fal fa-times fa-xs' : 'fas fa-caret-down fa-xs'} />
           </NavLink>
           {dropdown2 && <Dropdown MenuItems={MenuItems2} onClick={closeMobileMenu} />}
         </li>
@@ -76,11 +76,11 @@ const MenuItems = [
   {
     title: 'Horizonte Institucional',
     items: [{
-      title: 'Mision',
+      title: 'Misión',
       path: '/AboutUs/Mission',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Vision',
+      title: 'Visión',
       path: '/AboutUs/Vision',
       cName: 'dropdown-link fw-4'
     }, {
@@ -88,19 +88,19 @@ const MenuItems = [
       path: '/AboutUs/OurValues',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Filosofia Intitucional',
+      title: 'Filosofía iInstitucional',
       path: '/AboutUs/InsPhilosophy',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Axioma y Coloraria',
+      title: 'Axioma y Colorario',
       path: '/AboutUs/Axioma&Coloraria',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Simbolos',
+      title: 'Símbolo',
       path: '/AboutUs/Symbols',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Quienes somos',
+      title: 'Quiénes Somos',
       path: '/AboutUs/AboutUs',
       cName: 'dropdown-link fw-4'
     }]
@@ -112,11 +112,11 @@ const MenuItems = [
       path: '/AboutUs/RosistaStaff',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Promosiones Rosista',
+      title: 'Promociones Rosista',
       path: '/AboutUs/RosistaPromotions',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Seleccion de Honor y Merito',
+      title: 'Selección de Honor y Mérito',
       path: '/AboutUs/Honor&Merit',
       cName: 'dropdown-link fw-4'
     }, {

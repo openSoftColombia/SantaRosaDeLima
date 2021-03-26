@@ -3,7 +3,7 @@ import './Button.css';
 
 const ButtonComponet = ({ name, icon, color, borderRadius, margin, size, width, colorText, url, type }) => {
   return (
-    <button type={type} className="button"
+    <a href={url} rel="noopener noreferrer" target="_blank" className="button"
       style={{
         background: color || 'transparent',
         borderRadius: borderRadius || '5px',
@@ -21,7 +21,7 @@ const ButtonComponet = ({ name, icon, color, borderRadius, margin, size, width, 
           alignItems: 'center'
         }}>
         {name} <i style={{ marginLeft: '10px' }} className={icon}></i></h5>
-    </button>
+    </a>
   );
 };
 

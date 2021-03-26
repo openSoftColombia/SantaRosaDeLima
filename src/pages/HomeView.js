@@ -45,7 +45,7 @@ const HomeView = () => {
             <NewComponent />
           </div>
           <div className="col-xl-6">
-            <h1 className="fw-3 TitleHome mb-4 mt-3">Nivel academico</h1>
+            <h1 className="fw-3 TitleHome mb-4 mt-3">Nivel académico</h1>
             <hr className="lineHome" />
             {
               FireCard.map((card, index) => {
@@ -57,7 +57,7 @@ const HomeView = () => {
       </div>
       {/* galleria estudiantes y profesores  */}
       <div className="container contenSliderHome">
-        <h1 className="fw-3 TitleHome mb-4">Galeria</h1>
+        <h1 className="fw-3 TitleHome mb-4">Galería</h1>
         <SliderComponent type={'G'} />
       </div>
     </React.Fragment>

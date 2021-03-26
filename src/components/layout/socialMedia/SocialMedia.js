@@ -3,16 +3,16 @@ import './social.css'
 
 let link = [
   {
-    href: 'https://www.instagram.com/opensoftcolombia/',
+    href: 'https://www.facebook.com/col.santarosadelima.9',
     icon: 'icon fab fa-facebook-f'
   }, {
-    href: 'https://www.instagram.com/opensoftcolombia/',
+    href: 'https://twitter.com/?lang=es',
     icon: 'icon fab fa-twitter'
   }, {
-    href: 'https://www.instagram.com/opensoftcolombia/',
+    href: 'https://www.youtube.com/',
     icon: 'icon fab fa-youtube'
   }, {
-    href: 'https://www.instagram.com/opensoftcolombia/',
+    href: 'https://www.instagram.com/?hl=es',
     icon: 'icon fab fa-instagram'
   },
 ]

@@ -5,7 +5,7 @@ const AcceessibilityView = () => {
   return (
     <React.Fragment>
       <div className="container ContentTitleAccessibility">
-        <span className="SpanAccessibility"><i className="fab fa-hornbill fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">Mision</h1>
+        <span className="SpanAccessibility"><i className="fab fa-hornbill fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">Misión</h1>
       </div>
       <div className="container pt-4">
         <img alt="ImgTitle" src="https://institutolasalle.edu.co/images/2020/BANNER/banner_Mision.png" className="ImgTitleAccessibility" alt="AcceessibilityView" />

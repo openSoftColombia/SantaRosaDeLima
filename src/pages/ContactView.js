@@ -14,12 +14,12 @@ const ContactView = () => {
         </div>
         <div className="col-xl-4">
           <div className="row" style={{ margin: '14px', alignItems: 'center', justifyContent: 'center' }}>
-            <h3 className="fw-4 TitleGallery">Encuentranos</h3>
+            <h3 className="fw-4 TitleGallery">Encuéntranos</h3>
           </div>
           <div className="container">
             <div>
               <p style={{ fontSize: '18px', marginBottom: '3px' }}>Colegio Santa Rosa De Lima</p>
-              <p style={{ fontSize: '18px', marginBottom: '3px' }}>Direccion: Cl. 12 #45</p>
+              <p style={{ fontSize: '18px', marginBottom: '3px' }}>Dirección: Cl. 12 #45</p>
               <p style={{ fontSize: '18px', marginBottom: '3px' }}>Barrio: El Carmen </p>
               <p style={{ fontSize: '18px', marginBottom: '3px' }}>Malambo, Atlántico</p>
             </div>
