@@ -10,7 +10,7 @@
   margin-left: 200px;
 }
 .card-Card {
-  max-height: 156px;
+  max-height: 100%;
   max-width: 100%;
 }
 .card-Card-Info {
@@ -35,6 +35,7 @@
 }
 
 .float-right{
-  width: 57%;
+  width: 100%;
   height: 130px;
+  object-fit: unset;
 }

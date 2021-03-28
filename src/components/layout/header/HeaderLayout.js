@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LogoColegioImg from './../../../assets/img/LogoColegio.svg';
+import Colegio from './../../../assets/img/Colegio-01.svg';
 import { NavLink, Link } from 'react-router-dom';
 
 import './HeaderLayout.css';
@@ -25,7 +25,7 @@ const HeaderLayout = () => {
   return (
     <nav className="navbar">
       <Link to='/Home' className="navbar-logo">
-        <img src={LogoColegioImg} alt="LOGO" className="img" />
+        <img src={Colegio} alt="LOGO" className="img" />
       </Link>
 
       <div className="menu-icon" onClick={handleClick}>
@@ -76,24 +76,16 @@ const MenuItems = [
   {
     title: 'Horizonte Institucional',
     items: [{
-      title: 'Misión',
-      path: '/AboutUs/Mission',
+      title: 'Misión y Visión',
+      path: '/AboutUs/Vision&Mission',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Visión',
-      path: '/AboutUs/Vision',
-      cName: 'dropdown-link fw-4'
-    }, {
-      title: 'Nuestros valores',
-      path: '/AboutUs/OurValues',
-      cName: 'dropdown-link fw-4'
-    }, {
-      title: 'Filosofía iInstitucional',
-      path: '/AboutUs/InsPhilosophy',
+      title: 'Filosofía Institucional',
+      path: '/AboutUs/InstitutionalPhilosophy',
       cName: 'dropdown-link fw-4'
     }, {
       title: 'Axioma y Colorario',
-      path: '/AboutUs/Axioma&Coloraria',
+      path: '/AboutUs/Axioma&Colorario',
       cName: 'dropdown-link fw-4'
     }, {
       title: 'Símbolo',
