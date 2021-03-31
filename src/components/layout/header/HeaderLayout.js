@@ -88,7 +88,7 @@ const MenuItems = [
       path: '/AboutUs/Axioma&Colorario',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Símbolo',
+      title: 'Símbolos',
       path: '/AboutUs/Symbols',
       cName: 'dropdown-link fw-4'
     }, {

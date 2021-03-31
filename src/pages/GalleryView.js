@@ -33,9 +33,9 @@ const GalleryView = () => {
       {gallery ?
         <>
           <div className="ContentTitleGallery">
-            <span className="SpanGallery"><i className="far fa-images fa-2x"></i></span><h1 className="fw-3 TitleGallery">Galleria</h1>
+            <span className="SpanGallery"><i className="far fa-images fa-2x"></i></span><h1 className="fw-3 fs-2 TitleGallery">Galleria</h1>
           </div>
-          <h1 className="fw-4 DescriptionGallery">{gallery.title}</h1>
+          <h1 className="fw-4 fs-3 DescriptionGallery">{gallery.title}</h1>
           <p>{gallery.description}</p>
           {imageGallery.length > 0 ? <ReactPReactPhotoGallery images={imageGallery} /> : <LoadingComponent />}
         </>

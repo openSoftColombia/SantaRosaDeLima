@@ -1,0 +1,206 @@
+[
+  {
+    "id": 1,
+    "year": 1987,
+    "name": "Faustina Lobo Prent",
+    "promotion": "Ab Initio"
+  },
+  {
+    "id": 2,
+    "year": 1988,
+    "name": "Claudia Celin Medina",
+    "promotion": "Ad Gloriam"
+  },
+  {
+    "id": 3,
+    "year": 1989,
+    "name": "Jonny Pacheco González",
+    "promotion": "In Memoriam"
+  },
+  {
+    "id": 4,
+    "year": 1990,
+    "name": "Yomaira Noriega Ramírez",
+    "promotion": "Aequo Animo"
+  },
+  {
+    "id": 5,
+    "year": 1991,
+    "name": "Marly Ospino Miranda",
+    "promotion": "Bona Fide"
+  },
+  {
+    "id": 6,
+    "year": 1992,
+    "name": "Harold Villamizar G.",
+    "promotion": "Cuique Suum"
+  },
+  {
+    "id": 7,
+    "year": 1993,
+    "name": "Lucila Aguilar Ruiz",
+    "promotion": "Festina Lente"
+  },
+  {
+    "id": 8,
+    "year": 1994,
+    "name": "Milena Arguello Serrano",
+    "promotion": "Ex Aequo"
+  },
+  {
+    "id": 9,
+    "year": 1995,
+    "name": "Heidy Noriega Salas",
+    "promotion": "Ex Aequo"
+  },
+  {
+    "id": 10,
+    "year": 1996,
+    "name": "Johanna Arguello Serrano",
+    "promotion": "Ex Aequo"
+  },
+  {
+    "id": 11,
+    "year": 1997,
+    "name": "Wilson Díaz Carreño",
+    "promotion": "Ex Aequo"
+  },
+  {
+    "id": 12,
+    "year": 1998,
+    "name": "Andrés Arroyave Muñoz",
+    "promotion": "Ex Aequo"
+  },
+  {
+    "id": 13,
+    "year": 1999,
+    "name": "Hector Duran Heidelman",
+    "promotion": "Ex Aequo"
+  },
+  {
+    "id": 14,
+    "year": 2000,
+    "name": "Edwar Rossiano Pontón",
+    "promotion": "Ex Aequo"
+  },
+  {
+    "id": 15,
+    "year": 2001,
+    "name": "Wilmar Arroyave Muñoz - Nelson Acevedo Díaz",
+    "promotion": "Ex Aequo"
+  },
+  {
+    "id": 16,
+    "year": 2002,
+    "name": "Nelly Coronado Escobar",
+    "promotion": "Desideratum"
+  },
+  {
+    "id": 17,
+    "year": 2003,
+    "name": "Sandra Vergara Núñez",
+    "promotion": "Futurum Aedificamus"
+  },
+  {
+    "id": 18,
+    "year": 2004,
+    "name": "Alfredo Morillo Martínez",
+    "promotion": "Semper Fidelis"
+  },
+  {
+    "id": 19,
+    "year": 2005,
+    "name": "Josefa Orozco Gómez",
+    "promotion": "Sapere Aude"
+  },
+  {
+    "id": 20,
+    "year": 2006,
+    "name": "Juan Gómez Salazar",
+    "promotion": "Excelsior"
+  },
+  {
+    "id": 21,
+    "year": 2007,
+    "name": "Mariela Lyons  Díaz",
+    "promotion": "In Memoriam"
+  },
+  {
+    "id": 22,
+    "year": 2008,
+    "name": "Jeison Martínez Molinares",
+    "promotion": "Per Se"
+  },
+  {
+    "id": 23,
+    "year": 2009,
+    "name": "Issa Fuentes Gutiérrez- Brenda Suárez Paternina",
+    "promotion": "Egregius"
+  },
+  {
+    "id": 24,
+    "year": 2010,
+    "name": "Andrea Pereira Padilla ",
+    "promotion": "Invictus"
+  },
+  {
+    "id": 25,
+    "year": 2011,
+    "name": "Angie Nieto Luydens",
+    "promotion": "Erga Omnes"
+  },
+  {
+    "id": 26,
+    "year": 2012,
+    "name": "Luis Vizcaíno Pájaro",
+    "promotion": "Cum Laude"
+  },
+  {
+    "id": 27,
+    "year": 2013,
+    "name": "Andrés Rojas Arrieta y  Angelo  Martínez Narvaez",
+    "promotion": "Ad Gloriam"
+  },
+  {
+    "id": 28,
+    "year": 2014,
+    "name": "Daniela Fernández Maldonado",
+    "promotion": "Amat Victoriam Curam"
+  },
+  {
+    "id": 29,
+    "year": 2015,
+    "name": "Dana  Blanco Arias ",
+    "promotion": "Ad Usque Fidelis"
+  },
+  {
+    "id": 30,
+    "year": 2016,
+    "name": "Jorge  Machado Castro",
+    "promotion": "Ad Astra"
+  },
+  {
+    "id": 31,
+    "year": 2017,
+    "name": "Elkin  Guerra Guzman",
+    "promotion": "Et Cor Itellectum"
+  },
+  {
+    "id": 32,
+    "year": 2018,
+    "name": "Jesús  Fábregas Navarro y María  Verbel  Puello",
+    "promotion": "Explendo Somnia"
+  },
+  {
+    "id": 33,
+    "year": 2019,
+    "name": "Marield Barboza Ortiz",
+    "promotion": "Victrix"
+  },
+  {
+    "id": 34,
+    "year": 2020,
+    "name": "Julissa Torres Olivera",
+    "promotion": "Dominis Futurum"
+  }
+]

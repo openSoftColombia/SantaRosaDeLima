@@ -24,10 +24,10 @@ const DocumentPage = () => {
       {document ?
         <React.Fragment>
           <div className="container ContentTitleAccessibility">
-            <span className="SpanAccessibility"><i className="far fa-edit fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">{document.title}</h1>
+            <span className="SpanAccessibility"><i className="far fa-edit fa-2x"></i></span><h1 className="fw-4 fs-2 TitleAccessibility">{document.title}</h1>
           </div>
           <div className="container pt-4">
-            <p className="pt-4 fw-3 pz-2 pDescription">{document.description}</p>
+            <p className="pt-4 fw-3 fs-5 pDescription">{document.description}</p>
             {
               document.resources?.map(x => {
                 return (<h6 key={x.id}><a href={x.src} rel="noopener noreferrer" target="_blank">x.name</a></h6>)

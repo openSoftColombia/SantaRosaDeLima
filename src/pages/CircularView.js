@@ -40,7 +40,7 @@ const CircularView = () => {
   return (
     <React.Fragment>
       <div className="container ContentTitleCircular">
-        <span className="SpanCircular"><i className="fal fa-book-spells fa-2x"></i></span><h1 className="fw-4 TitleCircular">{title}</h1>
+        <span className="SpanCircular"><i className="fal fa-book-spells fa-2x"></i></span><h1 className="fw-4 fs-2 TitleCircular">{title}</h1>
       </div>
       <div className="container" style={{ alignItems: 'center', textAlign: 'center' }}>
         {document.length > 0 ? <TableComponent rows={document} /> : <LoadingComponent />}
