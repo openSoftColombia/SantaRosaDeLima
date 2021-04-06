@@ -32,19 +32,19 @@ export const FireCard = [
     leftColor: '',
     rightColor: '',
   }, {
-    title: 'Educación Básica ',
+    title: 'Educación Básica Primaria',
     description: '“Él los mira compasivo, y cuida de ellos, como quien es su protector, su apoyo y su padre; pero se descarga en vosotros de este cuidado”.',
     img: '',
     leftColor: '',
     rightColor: '',
   }, {
-    title: 'Educación Media',
+    title: 'Educación Básica Secundaria',
     description: '“El servicio de la educación se vive desde el compromiso de una comunidad cuyos miembros se asocian para asegurar la estabilidad y el futuro de la escuela”.',
     img: image,
     leftColor: '',
     rightColor: '',
   }, {
-    title: 'Educación Secundaria',
+    title: 'Educación Media',
     description: '“El servicio de la educación se vive desde el compromiso de una comunidad cuyos miembros se asocian para asegurar la estabilidad y el futuro de la escuela”.',
     img: image3,
     leftColor: '',

@@ -45,7 +45,7 @@ const HomeView = () => {
             <NewComponent />
           </div>
           <div className="col-xl-6">
-            <h1 className="fw-3 fs-2 TitleHome mb-4 mt-3">Nivel académico</h1>
+            <h1 className="fw-3 fs-2 TitleHome mb-4 mt-3">Nivel Académico</h1>
             <hr className="lineHome" />
             {
               FireCard.map((card, index) => {
