@@ -84,8 +84,8 @@ const MenuItems = [
       path: '/AboutUs/InstitutionalPhilosophy',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Axioma y Colorario',
-      path: '/AboutUs/Axioma&Colorario',
+      title: 'Axioma y Corolario',
+      path: '/AboutUs/Axioma&Corolario',
       cName: 'dropdown-link fw-4'
     }, {
       title: 'Símbolos',

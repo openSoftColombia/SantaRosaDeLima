@@ -23,7 +23,7 @@ const SocialMedia = () => {
       {
         link.map(({ href, icon }) => {
           return (
-            <a key={icon} href={href} className={icon} rel="noopener noreferrer" target="_blank"></a>
+            <a key={icon} href={href} className={icon} rel="noopener noreferrer" target="_blank" name={href}></a>
           )
         })
       }

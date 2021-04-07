@@ -21,7 +21,7 @@ const PublicRoutes = () => {
 
       <PublicRoute exact path="/AboutUs/Vision&Mission" component={VisionMission} />
       <PublicRoute exact path="/AboutUs/InstitutionalPhilosophy" component={InstitutionalPhilosophy} />
-      <PublicRoute exact path="/AboutUs/Axioma&Colorario" component={AxiomaColorario} />
+      <PublicRoute exact path="/AboutUs/Axioma&Corolario" component={AxiomaColorario} />
       <PublicRoute exact path="/AboutUs/Honor&Merit" component={HonorMerit} />
       <PublicRoute exact path="/AboutUs/Symbols" component={Symbol} />
       <PublicRoute exact path="/AboutUs/RosistaPromotions" component={RosistaPromotions} />

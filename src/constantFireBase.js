@@ -7,7 +7,7 @@ export const FireButton = [{
   icon: 'fad fa-video fa-lg',
   color: 'rgba(115, 175, 255)',
   margin: '0 5px 0 5px',
-  url: 'https://www.facebook.com/col.santarosadelima.9'
+  url: 'https://teams.microsoft.com/_?culture=es-co&country=CO&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/conversations/General?threadId=19:e537e2ff1d75488583af4214ed17a475@thread.tacv2&ctx=channel'
 
 }, {
   name: 'Circulares',
@@ -21,7 +21,7 @@ export const FireButton = [{
   icon: 'fad fa-user-friends fa-lg',
   color: '#E1A42F',
   margin: '0 5px 0 5px',
-  url: 'https://www.facebook.com/col.santarosadelima.9'
+  url: 'https://docs.google.com/forms/d/e/1FAIpQLSdNMGrKKyypXGJpz4H20zZeuNt9APUfI00GQIEdJ1ae6Q4bfQ/viewform?usp=sf_link'
 }];
 
 export const FireCard = [

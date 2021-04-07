@@ -19,6 +19,7 @@ const DocumentPage = () => {
     setDocument(data)
   }
 
+  console.log(document)
   return (
     <React.Fragment>
       {document ?
@@ -30,7 +31,7 @@ const DocumentPage = () => {
             <p className="pt-4 fw-3 fs-5 pDescription">{document.description}</p>
             {
               document.resources?.map(x => {
-                return (<h6 key={x.id}><a href={x.src} rel="noopener noreferrer" target="_blank">x.name</a></h6>)
+                return (<h6 key={x.id}><a href={x.src} rel="noopener noreferrer" target="_blank">Descargar aqui</a></h6>)
               })
             }
           </div>

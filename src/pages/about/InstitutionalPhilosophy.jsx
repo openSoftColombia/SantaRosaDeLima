@@ -19,7 +19,7 @@ const InstitutionalPhilosophy = () => {
             <div className="ContentTitleAccessibility" style={{ alignItems: 'Center', textAlign: 'center' }}>
               <span className="SpanAccessibility"><i className="fab fa-hornbill fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">Modelo Pedagógico</h1>
             </div>
-            <img src={imgModelo} alt="ImgDescription" style={{ width: '500px', marginTop: '15px' }} />
+            <img src={imgModelo} alt="ImgDescription" style={{ width: '500px', marginTop: '5px' }} />
           </div>
         </div>
       </div>

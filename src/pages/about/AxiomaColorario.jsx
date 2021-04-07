@@ -10,13 +10,13 @@ const AxiomaColorario = () => {
         <span className="SpanAccessibility"><i className="fab fa-hornbill fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">Axioma</h1>
       </div>
       <div className="container">
-        <img src={imgMision} alt="ImgDescription" className="ImgTitleDescription" />
+        <img src={imgVision} alt="ImgDescription" className="ImgTitleDescription" />
       </div>
       <div className="container ContentTitleAccessibility" style={{ paddingTop: '0', alignItems: 'Center', textAlign: 'center' }}>
-        <span className="SpanAccessibility"><i className="fab fa-hornbill fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">Colario</h1>
+        <span className="SpanAccessibility"><i className="fab fa-hornbill fa-2x"></i></span><h1 className="fw-4 TitleAccessibility">Corolario</h1>
       </div>
       <div className="container">
-        <img src={imgVision} alt="ImgDescription" className="ImgTitleDescription" />
+        <img src={imgMision} alt="ImgDescription" className="ImgTitleDescription" />
       </div>
     </React.Fragment>
   )
