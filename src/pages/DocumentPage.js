@@ -5,6 +5,7 @@ import LoadingComponent from './../components/common/loading/LoadingComponent'
 
 import axios from 'axios'
 import url from './../config/config'
+import { getNameDocument } from './../helpers/getNameDocument'
 
 const DocumentPage = () => {
   const [document, setDocument] = useState([])
@@ -19,7 +20,6 @@ const DocumentPage = () => {
     setDocument(data)
   }
 
-  console.log(document)
   return (
     <React.Fragment>
       {document ?
@@ -27,11 +27,11 @@ const DocumentPage = () => {
           <div className="container ContentTitleAccessibility">
             <span className="SpanAccessibility"><i className="far fa-edit fa-2x"></i></span><h1 className="fw-4 fs-2 TitleAccessibility">{document.title}</h1>
           </div>
-          <div className="container pt-4">
+          <div className="container pt-2">
             <p className="pt-4 fw-3 fs-5 pDescription">{document.description}</p>
             {
               document.resources?.map(x => {
-                return (<h6 key={x.id}><a href={x.src} rel="noopener noreferrer" target="_blank">Descargar aqui</a></h6>)
+                return (<h6 key={x.id}>Descargar: <a href={x.src} rel="noopener noreferrer" target="_blank">{getNameDocument(x.name)}</a></h6>)
               })
             }
           </div>

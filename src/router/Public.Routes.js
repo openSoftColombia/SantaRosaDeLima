@@ -12,6 +12,7 @@ import AxiomaColorario from '../pages/about/AxiomaColorario';
 import HonorMerit from '../pages/about/HonoMerit';
 import Symbol from '../pages/about/Symbol';
 import RosistaPromotions from '../pages/about/RosistaPromotions';
+import RosistaStaff from '../pages/about/RosistaStaff';
 
 const PublicRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const PublicRoutes = () => {
       <PublicRoute exact path="/AboutUs/Axioma&Corolario" component={AxiomaColorario} />
       <PublicRoute exact path="/AboutUs/Honor&Merit" component={HonorMerit} />
       <PublicRoute exact path="/AboutUs/Symbols" component={Symbol} />
+      <PublicRoute exact path="/AboutUs/RosistaStaff" component={RosistaStaff} />
       <PublicRoute exact path="/AboutUs/RosistaPromotions" component={RosistaPromotions} />
 
       <PublicRoute exact path="/Communications/:title" component={CircularView} />

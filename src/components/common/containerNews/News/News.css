@@ -22,3 +22,21 @@
 .plrNews{
   margin: 0 20px 10px 20px;
 }
+
+.conatinerDoc{
+  margin: auto 30px;
+  display: flex;
+  align-items: center;
+}
+
+.conatinerDoc img{
+  width: 50px;
+  margin-right: 0.5rem;
+  border-radius: 0;
+}
+
+.conatinerDoc a{
+  font-size: 12px;
+}
+
+

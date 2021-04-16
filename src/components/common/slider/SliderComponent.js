@@ -10,6 +10,7 @@ import url from './../../../config/config'
 
 const SliderComponent = ({ type }) => {
   const [gallery, setGallery] = useState([])
+  const [slidesToShow, setSlidesToShow] = useState(1)
 
   useEffect(() => {
     getGalleryTypeB()
@@ -18,14 +19,24 @@ const SliderComponent = ({ type }) => {
   const getGalleryTypeB = async () => {
     const { data } = await axios.get(`${url}/gallery/type/${type}`)
     setGallery(data)
+    if (data.length == 2) {
+      setSlidesToShow(2)
+    } else if (data.length == 3) {
+      setSlidesToShow(3)
+    } else if (data.length >= 4) {
+      setSlidesToShow(4)
+    }
   }
+
+  console.log(gallery);
 
   return (
     <React.Fragment>
       {/* Requerid css of slider */}
       <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-      <Slider {...settings}>
+
+      <Slider {...settings} slidesToShow={slidesToShow}>
         {gallery.map(({ id, title, description, resources }) => {
           return (
             <Card key={id} style={{ width: '18rem', height: '22rem' }}>
@@ -40,6 +51,7 @@ const SliderComponent = ({ type }) => {
         })
         }
       </Slider>
+
     </React.Fragment>
   );
 }
@@ -48,7 +60,6 @@ export default SliderComponent;
 const settings = {
   dots: true,
   infinite: true,
-  slidesToShow: 4,
   slidesToScroll: 1,
   initialSlide: 0,
   autoplay: true,
@@ -75,4 +86,16 @@ const settings = {
       }
     }
   ]
+};
+
+const settings1 = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  autoplay: true,
+  speed: 1000,
+  autoplaySpeed: 4000,
+  cssEase: "linear"
 };

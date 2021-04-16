@@ -2,9 +2,17 @@ import React from 'react'
 import CarouselComponent from '../../carousel/CarouselComponet'
 import LogoImg from './../../../../assets/img/logo.jpg';
 import './News.css'
+import NewDocument from './../NewDocument/NewDocument'
 
 const NewsComponent = ({ title, description, createdAt, resources }) => {
   let date = prettyDate(createdAt);
+
+  let type = resources[0].src.split('.')
+  let length = type.length - 1
+  let typeDocument = type[length]
+  console.log(typeDocument)
+  const Render = typeDocument == 'pdf' ? NewDocument : CarouselComponent
+
   return (
     <div className="pageNews pb-2">
       <div className="contentNews">
@@ -19,7 +27,7 @@ const NewsComponent = ({ title, description, createdAt, resources }) => {
         <p className="fw-3 text-justify">{description}</p>
       </div>
       <div>
-        <CarouselComponent images={resources} carousel={carousel} img={iamgen} />
+        <Render res={resources} images={resources} carousel={carousel} img={iamgen} />
       </div>
     </div>
   )
