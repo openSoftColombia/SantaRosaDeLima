@@ -30,7 +30,7 @@ const ContactView = () => {
       <div className="row" style={{ margin: '14px', alignItems: 'center', justifyContent: 'center' }}>
         <h1 className="fw-5 TitleContact">Trabaje con nosotros</h1>
       </div>
-      <h3 className="fw-4">Quieres trabajar con nosotros envía tu hija de vida aquí: <span className="TitleGallery">colsantarosadelima1@gmail.com</span></h3>
+      <h3 className="fw-4">Quieres trabajar con nosotros, envía tu hoja de vida aquí: <span className="TitleGallery">colsantarosadelima1@gmail.com</span></h3>
     </div>
   )
 }

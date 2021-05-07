@@ -120,11 +120,11 @@ const MenuItems = [
   {
     title: 'Gratitud Rosista',
     items: [{
-      title: 'Santa Rosa de lima',
+      title: 'Santa Rosa de Lima',
       path: '/AboutUs/SantaRosaDeLima',
       cName: 'dropdown-link fw-4'
     }, {
-      title: 'Fiesta de gratitud',
+      title: 'Fiesta de Gratitud',
       path: '/AboutUs/GratitudeParty',
       cName: 'dropdown-link fw-4'
     }]

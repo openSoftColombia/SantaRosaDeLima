@@ -14,7 +14,6 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 const TableHonor = ({ rows }) => {
-  console.log(rows);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [search, setSearch] = useState('');
@@ -37,7 +36,8 @@ const TableHonor = ({ rows }) => {
 
   const filterElement = () => {
     let filter = rows.filter(item => {
-      if (item.Title.normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(search)) {
+      if (item.title.normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(search)) {
+        console.log(item);
         return item;
       }
     })

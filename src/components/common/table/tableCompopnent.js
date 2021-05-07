@@ -16,10 +16,8 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import './table.css';
 
 const TableComponent = ({ rows }) => {
-  console.log(rows);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
-  const [search, setSearch] = useState('');
   const [title, setTitle] = useState(rows);
 
   const handleChangePage = (event, newPage) => {
@@ -27,20 +25,14 @@ const TableComponent = ({ rows }) => {
   };
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
+    setRowsPerPage(event.target.value);
     setPage(0);
   };
 
-  const onChangeSearch = async (e) => {
-    e.persist();
-    setSearch(e.target.value);
-    filterElement();
-  }
-
-  const filterElement = () => {
+  const filterElement = (value) => {
     let filter = rows.filter(item => {
-      if (item.Title.normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(search)) {
-        return item;
+      if (item.title.toLowerCase().includes(value.toLowerCase())) {
+        return item
       }
     })
     setTitle(filter);
@@ -49,7 +41,7 @@ const TableComponent = ({ rows }) => {
   return (
     <React.Fragment>
       <div className="paginationTableTable">
-        <TextField id="search" label="Buscar..." className="mb-4" value={search} onChange={onChangeSearch}
+        <TextField id="search" label="Buscar..." className="mb-4" onChange={(e) => filterElement(e.target.value)}
           InputProps={{
             endAdornment: (
               <InputAdornment position="start">
